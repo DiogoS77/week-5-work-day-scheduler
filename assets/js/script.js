@@ -22,3 +22,13 @@ function updateTimeslots() {
     }
   });
 }
+
+function onSaveTask(e) {
+  var $timeBlock = $(e.target).closest(".time-block");
+  var hour = $timeBlock.attr("data-hour");
+  var task = $timeBlock.find(".description").val();
+
+  localStorage.setItem(hour, task);
+
+  console.log("saved");
+}
