@@ -61,7 +61,7 @@ function init() {
 
   var $currentDay = $("#currentDay");
   setInterval(function () {
-    var currentDay = dayjs().format("dddd MMMM Do YYYY, h:mm:ss a");
+    var currentDay = dayjs().format("dddd MMMM D YYYY, h:mm:ss a");
     $currentDay.text(currentDay);
     updateTimeslots();
   }, 10000);
