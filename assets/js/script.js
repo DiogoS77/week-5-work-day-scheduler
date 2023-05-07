@@ -32,3 +32,39 @@ function onSaveTask(e) {
 
   console.log("saved");
 }
+
+function generateTimeslots() {
+  for (var hour = options.startHour; hour <= options.endHour; hour++) {
+    var savedTask = localStorage.getItem(hour) || "";
+    var $timeBlock = $("<div>", {
+      class: "row time-block",
+      "data-hour": hour,
+      html: `
+        <div class="col-sm-2 hour">${hour}</div>
+        <div class="col-sm-8 row">
+          <textarea class="col-md-10 description">${savedTask}</textarea>
+        </div>
+        <div class="col-sm-2">
+          <button class="btn btn-primary saveBtn">Save</button>
+        </div>
+      `,
+    });
+
+    $(".container").append($timeBlock);
+  }
+}
+
+function init() {
+  generateTimeslots();
+  updateTimeslots();
+  $(".container").on("click", ".saveBtn", onSaveTask);
+
+  var $currentDay = $("#currentDay");
+  setInterval(function () {
+    var currentDay = dayjs().format("dddd MMMM Do YYYY, h:mm:ss a");
+    $currentDay.text(currentDay);
+    updateTimeslots();
+  }, 10000);
+}
+
+init();
