@@ -1,6 +1,6 @@
 var options = {
   startHour: 9,
-  endHour: 5,
+  endHour: 17,
 };
 
 function updateTimeslots() {
@@ -40,13 +40,11 @@ function generateTimeslots() {
       class: "row time-block",
       "data-hour": hour,
       html: `
-        <div class="col-sm-2 hour">${hour}</div>
-        <div class="col-sm-8 row">
-          <textarea class="col-md-10 description">${savedTask}</textarea>
-        </div>
-        <div class="col-sm-2">
-          <button class="btn btn-primary saveBtn">Save</button>
-        </div>
+       <div class="col-2 col-md-1 hour py-3">${hour}</div>
+            <textarea class="col-8 col-md-10 description">${savedTask}</textarea>
+            <button class="btn saveBtn col-2 col-md-1">
+              <i class="fas fa-save"></i>
+            </button>
       `,
     });
 
