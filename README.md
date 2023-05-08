@@ -45,9 +45,9 @@ This challenge helped me a lot because it made my javascript thinking better in 
 
 To use this website is pretty simple. You type what you will be doing on each time box and click on the blue save button at the end. And it should save it for you, so every time you open you can check what was your plans during the day.
 
-![alt text](/assets/images/work-day.png"End Result Screenshot")
+![alt text](/assets/images/work-day.png "End Result Screenshot")
 
-Deployed Application:
+Deployed Application: https://diogos77.github.io/week-5-work-day-scheduler/
 
 ## License
 
