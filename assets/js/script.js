@@ -67,3 +67,11 @@ function init() {
 }
 
 init();
+
+//This is a JavaScript code that creates a daily planner with time slots for users to input their tasks or schedule.
+//The planner has a start hour and end hour, and time slots are created for each hour in between.
+//The updateTimeslots() function updates the styling of the time slots according to the current hour of the day.
+//The onSaveTask(e) function is called when the user saves a task and stores the task in the local storage.
+//The generateTimeslots() function creates the time slots and appends them to the HTML page.
+//The init() function initializes the planner by calling generateTimeslots(), updateTimeslots(), and adding a click event listener to the save buttons.
+//It also updates the current day and time every 10 seconds.
