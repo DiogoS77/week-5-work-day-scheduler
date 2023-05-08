@@ -31,6 +31,7 @@ function onSaveTask(e) {
   localStorage.setItem(hour, task);
 
   console.log("saved");
+  alert("Saved");
 }
 
 function generateTimeslots() {
